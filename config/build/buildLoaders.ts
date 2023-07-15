@@ -7,7 +7,12 @@ const buildLoaders = (): webpack.RuleSetRule[] => {
     exclude: /node_modules/,
   };
 
-  return [TSLoader];
+  const CSSLoader = {
+    test: /\.css$/i,
+    use: ["style-loader", "css-loader"],
+  };
+
+  return [TSLoader, CSSLoader];
 };
 
 export default buildLoaders;
