@@ -1,0 +1,11 @@
+.app.dark {
+  --bg-color: #0D1B1E;
+
+  // for titles, main texts which is the most important content
+  --primary-color: #F7F0F5;
+  // for descriptions, lower prior texts
+  --secondary-color: #393d3f; // check with black cards in case if shit change.
+
+  // Light blue for borders
+  --border-color: #82ddf0; // or #5296A5 border transparent or some contrast, will see.
+}
