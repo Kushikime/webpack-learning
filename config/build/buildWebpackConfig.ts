@@ -16,10 +16,10 @@ const buildWebpackConfig = (options: BuildOptions): webpack.Configuration => {
       clean: true,
     },
     module: {
-      rules: buildLoaders(),
+      rules: buildLoaders(options),
     },
     resolve: buildResolvers(),
-    plugins: buildPlugins(paths.html),
+    plugins: buildPlugins(paths),
     devServer: isDev ? buildDevServer(options) : undefined,
     devtool: isDev ? "inline-source-map" : undefined,
   };
