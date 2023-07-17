@@ -12,7 +12,19 @@ const buildLoaders = (): webpack.RuleSetRule[] => {
     use: ["style-loader", "css-loader"],
   };
 
-  return [TSLoader, CSSLoader];
+  const SASSLoader = {
+    test: /\.s[ac]ss$/i,
+    use: [
+      // Creates `style` nodes from JS strings
+      "style-loader",
+      // Translates CSS into CommonJS
+      "css-loader",
+      // Compiles Sass to CSS
+      "sass-loader",
+    ],
+  };
+
+  return [TSLoader, CSSLoader, SASSLoader];
 };
 
 export default buildLoaders;
