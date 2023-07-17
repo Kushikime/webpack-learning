@@ -6,6 +6,7 @@ const buildDevServer = (options: BuildOptions): DevServerConfiguration => {
     port: options.port,
     // auto open in browser
     open: true,
+    historyApiFallback: true,
   };
 };
 
